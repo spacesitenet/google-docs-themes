@@ -1,0 +1,32 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# Dependencies/build output
+node_modules/
+dist/
+build/
+coverage/
+
+# Chrome Web Store packages
+*.zip
+*.crx
+*.pem
+
+# Logs and temp files
+*.log
+tmp/
+temp/

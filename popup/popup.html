@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google Docs Themes</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">spacesitenet</p>
+          <h1>Google Docs Themes</h1>
+          <p class="tagline">Dark mode, focus themes, and custom writing styles.</p>
+        </div>
+        <label class="switch" title="Enable Google Docs Themes">
+          <input id="enabledToggle" type="checkbox">
+          <span></span>
+        </label>
+      </header>
+
+      <section class="preview" id="themePreview" aria-live="polite">
+        <div class="preview-toolbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="preview-page">
+          <strong>Writing style preview</strong>
+          <p>Choose a designed preset or save your own Google Docs theme.</p>
+        </div>
+      </section>
+
+      <section class="section favorites-section" id="favoritesSection">
+        <div class="section-heading">
+          <div>
+            <h2>Favorites</h2>
+            <p>Saved quick picks</p>
+          </div>
+        </div>
+        <div class="theme-grid compact-grid" id="favoritesGrid"></div>
+        <p class="empty-state" id="favoritesEmpty">Tap the star on any theme to save it here.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <h2>Theme Library</h2>
+            <p>Dark, focus + fun</p>
+          </div>
+        </div>
+        <div class="theme-grid" id="themeGrid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <h2>Custom Theme</h2>
+            <p>Make it yours</p>
+          </div>
+          <button class="text-button" id="copyPresetButton" type="button">Start from selected</button>
+        </div>
+        <form class="custom-form" id="customThemeForm"></form>
+        <button class="primary-button" id="saveCustomButton" type="button">Save custom theme</button>
+      </section>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="../src/themes.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

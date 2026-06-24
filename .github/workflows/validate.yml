@@ -1,0 +1,31 @@
+name: Validate Extension
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate manifest JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.json', 'utf8'))"
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check src/themes.js
+          node --check src/content.js
+          node --check popup/popup.js
+
+      - name: Verify required extension files
+        shell: pwsh
+        run: ./scripts/package.ps1
