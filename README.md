@@ -4,6 +4,12 @@ Dark mode, focus themes, and custom writing styles for Google Docs.
 
 Google Docs Themes is a Manifest V3 Chrome extension that lets users restyle Google Docs with polished dark themes, bright/fun writing themes, favorites, and custom color controls.
 
+## Install From Chrome Web Store
+
+[**Add Google Docs Themes to Chrome**](https://chromewebstore.google.com/detail/google-docs-themes/kgcbojpmnodghceoafplkdeiohbkkbcm?authuser=0&hl=en)
+
+Make Google Docs easier on your eyes with dark mode, focus themes, playful writing styles, and custom palettes.
+
 ## Features
 
 - Dark mode for Google Docs documents and the Docs home page
